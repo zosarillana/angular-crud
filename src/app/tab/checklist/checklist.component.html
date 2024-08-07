@@ -1,0 +1,120 @@
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{ !isLinear ? "Enable linear mode" : "Disable linear mode" }}
+</button> -->
+<mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Date and time of visit</ng-template>
+      <div class="input-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Date of visit</mat-label>
+          <input matInput [matDatepicker]="picker" />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker">
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Time of visit</mat-label>
+          <input
+            matInput
+            [ngxTimepicker]="timePicker"
+            [formControl]="timeControl"
+            placeholder="Choose time"
+          />
+          <ngx-material-timepicker #timePicker></ngx-material-timepicker>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Area of visit</ng-template>
+      <section class="example-section">
+        <mat-checkbox class="example-margin">North Luzon</mat-checkbox>
+        <mat-checkbox class="example-margin">Central Luzon</mat-checkbox>
+        <mat-checkbox class="example-margin">Mega Manilla</mat-checkbox>
+        <mat-checkbox class="example-margin">South Luzon</mat-checkbox>
+        <mat-checkbox class="example-margin">Central Visayas</mat-checkbox>
+        <mat-checkbox class="example-margin">Eastern Visayas</mat-checkbox>
+        <mat-checkbox class="example-margin">Western Visayas</mat-checkbox>
+        <mat-checkbox class="example-margin">Northern Mindanao</mat-checkbox>
+        <mat-checkbox class="example-margin">Southern Mindanao</mat-checkbox>
+      </section>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      <div class="input-form">
+        <mat-form-field>
+          <mat-label>Account Name</mat-label>
+          <input
+            matInput
+            placeholder="Account Name"
+            formControlFirstName="thirdCtrl"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Distributor</mat-label>
+          <input
+            matInput
+            placeholder="Distributor"
+            formControlMiddlename="thirdCtrl"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Sales Personnel In-charged
+        </mat-label>
+          <input
+            matInput
+            placeholder="Sales Personnel In-charged
+            "
+            formControlLastName="secondCtrl"
+            required
+          />
+        </mat-form-field>
+        
+      </div>
+
+      <div class="input-form">
+        <section class="example-section">
+            <mat-checkbox class="example-margin">North Luzon</mat-checkbox>
+            <mat-checkbox class="example-margin">Central Luzon</mat-checkbox>
+            <mat-checkbox class="example-margin">Mega Manilla</mat-checkbox>
+            <mat-checkbox class="example-margin">South Luzon</mat-checkbox>
+            <mat-checkbox class="example-margin">Central Visayas</mat-checkbox>
+            <mat-checkbox class="example-margin">Eastern Visayas</mat-checkbox>
+            <mat-checkbox class="example-margin">Western Visayas</mat-checkbox>
+            <mat-checkbox class="example-margin">Northern Mindanao</mat-checkbox>
+            <mat-checkbox class="example-margin">Southern Mindanao</mat-checkbox>
+          </section>
+
+         
+      </div>
+     
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>

@@ -1,0 +1,113 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+/* stepper */
+.mat-stepper-vertical {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+
+/* containers */
+.container{
+  margin: 2%;
+  }
+
+/* input forms */
+h1{
+  font-size:50px;
+  font-weight: 800;
+}
+
+.example-form {
+  display: flex;
+  min-width: 200px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-full-width-2 {
+  width: 100%;
+  margin-left: 20px;
+}
+
+/* table start */
+table {
+  width: 100%;
+}
+
+.demo-table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.mat-column-accountNumber {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-accountName {
+  padding-left: 16px;
+  font-size: 15;
+}
+
+.mat-column-distributor {
+  padding-left: 16px;
+  font-size: 15px;
+}
+
+.mat-column-weight {
+  font-style: italic;
+}
+
+.mat-column-symbol {
+  width: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+/* table end */
+
+/* section start */
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 20px 20px 20px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+/* section end */

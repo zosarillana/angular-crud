@@ -1,0 +1,21 @@
+.mat-stepper-vertical {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+  min-width: 200px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.input-form {
+  display: flex;
+  gap: 20px;
+}
+
+.example-section{
+    margin: 12px 0;
+    width: 500px;
+    gap: 20px;
+}

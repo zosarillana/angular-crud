@@ -1,0 +1,53 @@
+<!-- table start -->
+<table
+mat-table
+[dataSource]="dataSource"
+class="mat-elevation-z8 demo-table"
+>
+<!-- accountNumber Column -->
+<ng-container matColumnDef="accountNumber">
+  <th mat-header-cell *matHeaderCellDef>Account number.</th>
+  <td mat-cell *matCellDef="let element">
+    {{ element.accountNumber }}
+  </td>
+</ng-container>
+
+<!-- accountName Column -->
+<ng-container matColumnDef="accountName">
+  <th mat-header-cell *matHeaderCellDef>Name</th>
+  <td mat-cell *matCellDef="let element">{{ element.accountName }}</td>
+</ng-container>
+
+<!-- distributor Column -->
+<ng-container matColumnDef="distributor">
+  <th mat-header-cell *matHeaderCellDef>Distributor</th>
+  <td mat-cell *matCellDef="let element">{{ element.distributor }}</td>
+</ng-container>
+
+<!-- salesPersonel Column -->
+<ng-container matColumnDef="salesPersonel">
+  <th mat-header-cell *matHeaderCellDef>Symbol</th>
+  <td mat-cell *matCellDef="let element">
+    {{ element.salesPersonel }}
+  </td>
+</ng-container>
+
+<!-- areaName Column -->
+<ng-container matColumnDef="areaName">
+  <th mat-header-cell *matHeaderCellDef>Area name</th>
+  <td mat-cell *matCellDef="let element">{{ element.areaName }}</td>
+</ng-container>
+
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+<!-- table end -->
+
+<!-- pagination start -->
+<mat-paginator
+[pageSizeOptions]="[5, 10, 20]"
+showFirstLastButtons
+aria-label="Select page of periodic elements"
+>
+</mat-paginator>
+<!-- pagination end -->
